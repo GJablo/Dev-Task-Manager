@@ -8,7 +8,7 @@ const router = express.Router();
 router.post('/', protect, createTask);
 router.get('/me', protect, getMyTasks);
 router.get('/all', protect, authorize(['admin']), getAllTasks);
-router.put('/:id', updateTask);
-router.delete('/:id', deleteTask);
+router.put('/:id', protect, authorize(['admin', 'developer']), updateTask);
+router.delete('/:id', protect, authorize(['admin', 'developer']), deleteTask);
 
 module.exports = router;
