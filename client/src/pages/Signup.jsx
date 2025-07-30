@@ -16,11 +16,11 @@ export default function Signup() {
     if (!email || !password) return alert("Please fill in all fields");
     setLoading(true);
     try {
-      const response = await API.post("/auth/register", { email, password });
-      localStorage.setItem("token", response.data.token);
+      const res = await API.post("/auth/register", { email, password });
+      localStorage.setItem("token", res.data.token);
       navigate("/dashboard");
     } catch (error) {
-      alert(error.response?.data?.message || "Signup failed");
+      alert(error.res?.data?.message || "Signup failed");
     } finally {
       setLoading(false);
     }
