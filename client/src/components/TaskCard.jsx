@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "./ui/card";
 import { CheckCircleIcon, TrashIcon } from "@heroicons/react/24/solid";
-import { Button } from "@components/ui/button";
+import { Button } from "./ui/button";
 
 export default function TaskCard({ task, onToggle, onDelete }) {
   return (

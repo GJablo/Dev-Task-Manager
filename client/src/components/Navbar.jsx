@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
-import { Button } from '@components/ui/button';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@components/ui/dropdown-menu';
+import { Button } from './ui/button';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from './ui/dropdown-menu';
 import { UserCircleIcon } from '@heroicons/react/24/solid';
 
 export default function Navbar() {

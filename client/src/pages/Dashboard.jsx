@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import API from 'src/services/api';
-import TaskCard from '@components/TaskCard';
-import TaskDialog from '@components/TaskDialog';
-import Navbar from '@components/Navbar';
-import { toast } from '@components/ui/sonner';
+import API from '../services/api';
+import TaskCard from '../components/TaskCard';
+import TaskDialog from '../components/TaskDialog';
+import Navbar from '../components/Navbar';
+import { toast } from 'sonner';
 
 
 export default function Dashboard() {

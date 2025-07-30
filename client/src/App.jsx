@@ -2,11 +2,13 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
-import ProtectedRoute from 'src/utils/ProtectedRoutes';
+import ProtectedRoute from './utils/ProtectedRoutes';
+import { Toaster } from "sonner";
 
 export default function App() {
   return (
     <Router>
+      <Toaster richColors position="top-right" />
       <Routes>
         <Route path="/" element={<Navigate to="/dashboard" />} />
         <Route path="/login" element={<Login />} />
