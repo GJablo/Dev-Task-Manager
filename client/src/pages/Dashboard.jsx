@@ -21,7 +21,7 @@ export default function Dashboard() {
   const createTask = async (payload) => {
     const res = await API.post('/tasks', payload);
     setTasks(prev =>[res.data, ...prev]);
-    toast({ title: 'Task created successfully!'});
+    toast('Task created successfully!');
   };
 
   const toggleTask = async (id) => {
@@ -33,7 +33,7 @@ export default function Dashboard() {
   const deleteTask = async (id) => {
     await API.delete(`/tasks/${id}`);
     setTasks(prev => prev.filter(t => t._id != id));
-    toast({ title: 'Task deleted successfully!' });
+    toast('Task deleted successfully!');
   };
 
   return (
